@@ -1,5 +1,3 @@
-#![allow(dead_code, unused_variables)]
-
 struct Cell {
     value: u8,
     marked: bool,
@@ -16,8 +14,7 @@ impl Cell {
 
 struct Board {
     cells: Vec<Vec<Cell>>,
-    rows: usize,
-    cols: usize,
+    size: usize,
 }
 
 impl Board {
@@ -31,10 +28,9 @@ impl Board {
             })
             .collect();
 
-        let rows = cells.len();
-        let cols = cells[0].len();
+        let size = cells.len();
 
-        Board { cells, rows, cols }
+        Board { cells, size }
     }
 
     fn sum_unmarked(&self) -> u64 {
@@ -70,7 +66,7 @@ impl Board {
         }
 
         // check columns`
-        for i in 0..self.rows {
+        for i in 0..self.size {
             if self.cells.iter().map(|row| &row[i]).all(|c| c.marked) {
                 return true;
             }
