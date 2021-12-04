@@ -75,7 +75,7 @@ impl Board {
 }
 
 fn main() {
-    let mut input = include_str!("../input.txt").split("\n\n");
+    let mut input = include_str!("../../inputs/4.txt").split("\n\n");
     let draws: Vec<u8> = input
         .next()
         .unwrap()

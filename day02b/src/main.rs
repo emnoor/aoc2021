@@ -3,7 +3,7 @@ fn main() {
     let mut y = 0;
     let mut aim = 0;
 
-    include_str!("../input.txt").lines().for_each(|line| {
+    include_str!("../../inputs/2.txt").lines().for_each(|line| {
         let (cmd, n) = line.split_once(" ").unwrap();
         let n = n.parse::<i64>().unwrap();
         match cmd {

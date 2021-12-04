@@ -1,5 +1,7 @@
 fn main() {
-    let bins: Vec<_> = include_str!("../input.txt").split_whitespace().collect();
+    let bins: Vec<_> = include_str!("../../inputs/3.txt")
+        .split_whitespace()
+        .collect();
     let number_of_bits = bins.iter().map(|bin| bin.len()).max().unwrap();
 
     let mut o2_bins = bins.clone();

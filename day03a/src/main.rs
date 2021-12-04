@@ -1,5 +1,5 @@
 fn main() {
-    let data = include_str!("../input.txt");
+    let data = include_str!("../../inputs/3.txt");
 
     let bins: Vec<_> = data.split_whitespace().collect();
     let len = bins.iter().map(|bin| bin.len()).max().unwrap();

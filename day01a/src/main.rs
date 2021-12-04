@@ -3,7 +3,7 @@ use itertools::Itertools;
 fn main() {
     println!(
         "{}",
-        include_str!("../input.txt")
+        include_str!("../../inputs/1.txt")
             .split_whitespace()
             .map(|s| s.parse::<i64>().unwrap())
             .tuple_windows()
